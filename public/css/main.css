@@ -9,7 +9,6 @@ body {
   color: var(--bs-primary-rgb);
   font-weight: 300;
   font-size: 1.2rem;
-  background-image: url(../img/noise-bg.png);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -74,7 +73,6 @@ h1, h2, h3, h4, h5, h6 {
     background:
       url('../img/human-1.svg') left bottom no-repeat,
       url('../img/human-2.svg') right bottom no-repeat,
-      url('../img/noise-bg.svg') left top repeat,
       var(--background-color);
   }
 }

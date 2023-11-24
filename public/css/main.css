@@ -12,7 +12,7 @@ body {
   background-image: url(../img/noise-bg.png);
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Unbounded', cursive;
   font-weight: 800;
 }
@@ -35,7 +35,7 @@ h1,h2,h3,h4,h5,h6 {
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #000000;
   --bs-btn-hover-border-color: #000000;
-  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: var(--bs-primary-rgb);
   --bs-btn-active-border-color: var(--bs-primary-rgb);
@@ -51,7 +51,7 @@ h1,h2,h3,h4,h5,h6 {
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #000000;
   --bs-btn-hover-border-color: #000000;
-  --bs-btn-focus-shadow-rgb: 13,110,253;
+  --bs-btn-focus-shadow-rgb: 13, 110, 253;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: var(--bs-primary-rgb);
   --bs-btn-active-border-color: var(--bs-primary-rgb);
@@ -68,29 +68,59 @@ h1,h2,h3,h4,h5,h6 {
   --bs-pagination-active-border-color: var(--bs-primary-rgb);
 }
 
-
 /* Home */
 @media (min-width: 1200px) {
   .home {
-    background: 
+    background:
       url('../img/human-1.svg') left bottom no-repeat,
       url('../img/human-2.svg') right bottom no-repeat,
       url('../img/noise-bg.svg') left top repeat,
       var(--background-color);
-    ;
   }
 }
 
-.home-title::before {
+.home-title::before,
+.home-title::after {
   content: url('../img/stars.svg');
   position: absolute;
+}
+
+.home-title::before {
   left: -50px;
   top: -30px;
 }
 
 .home-title::after {
-  content: url('../img/stars.svg');
-  position: absolute;
   right: -50px;
   bottom: -30px;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1rem;
+  }
+
+  .container-fluid-custom {
+    padding: 2rem; /* Adjust padding for better spacing */
+  }
+
+  .row.mb-4 {
+    flex-direction: column; /* Stack columns for better stacking on smaller screens */
+    text-align: center; /* Center align content */
+  }
+
+  .col.text-end {
+    margin-top: 1rem; /* Add space between the two columns */
+  }
+
+  .col-sm-3.mb-4 {
+    flex: 0 0 100%; /* Full width for each card on smaller screens */
+  }
 }
